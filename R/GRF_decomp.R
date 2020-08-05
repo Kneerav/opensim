@@ -6,8 +6,8 @@
 #' @param setup_file string containing path to xml setup file.
 #' @return Output files will be prduced as identified in setup file.
 #' @export
-GRF_decomp = function(opensim_path = "C:/Program Files (x86)/OpenSim 3.2_32bit/bin",
-                   plugin_path = "C:/Program Files (x86)/OpenSim 3.2_32bit/plugins/IndAccPI.dll",
+GRF_decomp = function(opensim_path = "C:/Program Files (x86)/OpenSim 3.2/bin",
+                   plugin_path = "C:/Program Files (x86)/OpenSim 3.2/plugins/IndAccPI.dll",
                    setup_file){
 
   #Rewrite command to fix
@@ -20,7 +20,6 @@ GRF_decomp = function(opensim_path = "C:/Program Files (x86)/OpenSim 3.2_32bit/b
   CMD = paste0(opensim_path, ' -L ', plugin_path, ' -S ', setup_file)
 
   #run command through system
-  cat(system(CMD, intern = FALSE, wait=TRUE))
+  cat(system(CMD, intern = FALSE, wait=TRUE, show.output.on.console = FALSE))
 
 }
-

@@ -17,6 +17,6 @@ ID = function(opensim_path = "C:/OpenSim 3.3/bin",
   CMD = paste0(opensim_path, ' -S ', setup_file)
 
   #run command through system
-  cat(system(CMD, intern = FALSE, wait=TRUE))
+  cat(system(CMD, intern = FALSE, wait=TRUE, show.output.on.console = FALSE))
 
 }

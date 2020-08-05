@@ -1,16 +1,16 @@
-#' Run inverse kinematics to compute joint angles
+#' Run scale to compute joint angles
 #'
-#' Run inverse kinematics to compute joint angles
+#' Run scale to compute joint angles
 #' @param opensim_path string containing path to opensim bin. Default is "C:/OpenSim 3.3/bin".
 #' @param setup_file string containing path to xml setup file.
 #' @return Output files will be prduced as identified in setup file.
 #' @export
-IK = function(opensim_path = "C:/OpenSim 3.3/bin",
+Scale = function(opensim_path = "C:/OpenSim 3.3/bin",
               setup_file){
 
   #Rewrite command to fix
-  ik_path = paste0(opensim_path, "/ik")
-  opensim_path = paste0('"', ik_path, '"')
+  scale_path = paste0(opensim_path, "/scale")
+  opensim_path = paste0('"', scale_path, '"')
   setup_file = paste0('"', setup_file, '"')
 
   #setup command
